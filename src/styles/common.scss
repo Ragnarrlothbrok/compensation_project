@@ -1,0 +1,33 @@
+/* Common utility classes */
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-spacebtw {
+  justify-content: space-between;
+}
+
+.flex-space-around {
+  justify-content: space-around;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.title-font {
+  font-weight: 400;
+}
