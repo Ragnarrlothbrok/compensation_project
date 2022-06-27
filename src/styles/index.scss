@@ -1,6 +1,179 @@
-$body-color: slateblue;
+@import "./colors.scss";
 
 body {
-  color: $body-color;
+  box-sizing: border-box;
   font-family: sans-serif;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  .page-title {
+    line-height: 3rem;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 16px;
+  }
+
+  .page-description {
+    margin-top: 1rem;
+    line-height: 1rem;
+    padding-bottom: 0.25rem;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+}
+
+.container {
+  padding-inline: 1.25rem;
+  height: 600px;
+}
+
+.control-center {
+  box-sizing: border-box;
+  width: 25vw;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+  padding-bottom: 1rem;
+}
+
+.duration-control {
+  padding-top: 0.5rem;
+  padding-inline: 0.5rem;
+  height: 3rem;
+}
+
+#year-control {
+  height: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.salary-elements {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.salary-element {
+  padding: 0.75rem 0.5rem;
+}
+
+.sal-details {
+  vertical-align: middle;
+}
+
+.element-title {
+  padding-bottom: 0.125rem;
+}
+
+.element-amount {
+  font-size: 0.8175rem;
+  font-weight: 200;
+}
+
+.representation {
+  height: 100%;
+  width: 60vw;
+}
+
+.switch {
+  width: 48px;
+  padding: 2px;
+  background-color: $light-grey;
+  border: 1px solid $light-grey;
+  border-radius: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+  height: 20px;
+  align-items: center;
+}
+
+.toggle {
+  width: 18px;
+  height: 18px;
+  background-color: $grey;
+  border-radius: 100%;
+  position: relative;
+  transition: all 0.3s;
+  left: 0%;
+
+  &.benefits {
+    background-color: $benefits;
+  }
+
+  &.target-bonus {
+    background-color: $targetBonus;
+  }
+
+  &.sign-bonus {
+    background-color: $signOnBonus;
+  }
+
+  &.equity {
+    background-color: $equity;
+  }
+
+  &.base {
+    background-color: $baseSalary;
+  }
+
+  &.toggle-on {
+    left: 65%;
+  }
+}
+
+/* chart section */
+#breakdown {
+  margin-bottom: 2rem;
+  font-size: 16px;
+}
+
+.year-container {
+  padding-inline: 1rem;
+  box-sizing: border-box;
+  width: 20%;
+}
+
+.year-name {
+  padding: 1rem;
+  text-align: center;
+}
+
+.year-amount {
+  padding: 0.5rem 0;
+}
+
+div.bar > div:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+div.bar > div:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.bar-benefits {
+  background-color: $benefits;
+}
+
+.bar-target-bonus {
+  background-color: $targetBonus;
+}
+
+.bar-sign-bonus {
+  background-color: $signOnBonus;
+}
+
+.bar-equity {
+  background-color: $equity;
+}
+
+.bar-base {
+  background-color: $baseSalary;
 }

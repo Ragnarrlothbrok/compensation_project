@@ -1,3 +1,5 @@
 import '../styles/index.scss';
-
-console.log('webpack starterkit');
+import '../styles/common.scss';
+import '../styles/modal.scss';
+import "./actions";
+import "./table";
