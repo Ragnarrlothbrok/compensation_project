@@ -108,11 +108,11 @@ body {
     background-color: $benefits;
   }
 
-  &.target {
+  &.target-bonus {
     background-color: $targetBonus;
   }
 
-  &.signon-bonus {
+  &.sign-bonus {
     background-color: $signOnBonus;
   }
 
@@ -120,7 +120,7 @@ body {
     background-color: $equity;
   }
 
-  &.base-salary {
+  &.base {
     background-color: $baseSalary;
   }
 
@@ -130,6 +130,11 @@ body {
 }
 
 /* chart section */
+#breakdown {
+  margin-bottom: 2rem;
+  font-size: 16px;
+}
+
 .year-container {
   padding-inline: 1rem;
   box-sizing: border-box;
@@ -154,26 +159,21 @@ div.bar > div:first-child {
 }
 
 .bar-benefits {
-  height: 100px;
   background-color: $benefits;
 }
 
 .bar-target-bonus {
-  height: 100px;
   background-color: $targetBonus;
 }
 
 .bar-sign-bonus {
-  height: 100px;
   background-color: $signOnBonus;
 }
 
 .bar-equity {
-  height: 100px;
   background-color: $equity;
 }
 
 .bar-base {
-  height: 100px;
   background-color: $baseSalary;
 }
