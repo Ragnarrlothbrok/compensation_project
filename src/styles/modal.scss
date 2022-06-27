@@ -1,68 +1,67 @@
 /* Modal css */
 @keyframes top-bottom {
-    from {
-      top: -300px;
-      opacity: 0;
-    }
-  
-    to {
-      top: 0;
-      opacity: 1;
-    }
+  from {
+    top: -300px;
+    opacity: 0;
   }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
+
+  to {
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background: #000;
-    background-color: #0006;
+    opacity: 1;
   }
-  
-  .table-header {
-    padding: 2px 16px;
-    font-size: 14px;
-    font-weight: 200;
-  }
-  
-  .table-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    opacity: 1 !important;
-    animation: top-bottom 0.4s ease;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .breakdown-data {
-    width: 100%;
-    text-align: end;
-    border: 1px solid black;
-    padding: 0.5rem;
-  }
-  
-  .table-data {
-    text-align: center;
-  }
-  
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: #000;
+  background-color: #0006;
+}
+
+.table-header {
+  padding: 2px 16px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.table-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  opacity: 1;
+  animation: top-bottom 0.4s ease;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.breakdown-data {
+  width: 100%;
+  text-align: end;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+.table-data {
+  text-align: center;
+}
