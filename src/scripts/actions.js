@@ -156,11 +156,11 @@ togglebtns.forEach((toggler) => {
 const headerCreator = (headRow) => {
   let arr = [
     "Year",
-    "benefits",
-    "target-bonus",
-    "sign-bonus",
-    "equity",
-    "base",
+    "Benefits",
+    "Target-bonus",
+    "Sign-on-bonus",
+    "Equity",
+    "Base",
   ];
   arr.forEach((el) => {
     let heading = document.createElement("th");
