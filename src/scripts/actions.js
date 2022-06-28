@@ -44,7 +44,7 @@ let total = {
 
 const setTotal = (opTime, add, salElement) => {
   if (opTime === "all") {
-    const iterations = ["year1", "year2", "year3", "year4"];
+    const iterations = Object.keys(initialData);
     iterations.forEach((year) => {
       const opAmount = salElement === "" ? 0 : initialData[year][salElement];
       total[year] = add ? total[year] + opAmount : total[year] - opAmount;
@@ -58,7 +58,7 @@ const setTotal = (opTime, add, salElement) => {
 };
 
 const setInitialHeight = () => {
-  const iterations = ["year1", "year2", "year3", "year4"];
+  const iterations = Object.keys(initialData);
   iterations.forEach((year) => {
     const elements = [...document.getElementById(year).children];
     const yearVal = initialData[year];
@@ -107,7 +107,7 @@ yearSelect.addEventListener("change", (e) => {
 let togglebtns = [...document.getElementsByClassName("switch")];
 
 const toggleForAll = (edit, element) => {
-  const iterations = ["year1", "year2", "year3", "year4"];
+  const iterations = Object.keys(initialData);
   if (edit) {
     iterations.forEach((year) => {
       const targetElement = document.getElementById(`${year}-${element}`);
@@ -171,7 +171,7 @@ const headerCreator = (headRow) => {
 
 //function to have flexibility of adding just the data and not having to rewrite table code.
 const dataRowCreator = (bodyEl) => {
-  const iterations = ["year1", "year2", "year3", "year4"];
+  const iterations = Object.keys(initialData);
   iterations.forEach((year) => {
     let row = document.createElement("tr");
     let yearName = document.createElement("td");
