@@ -42,6 +42,8 @@ let total = {
   year4: initialTotal("year4"),
 };
 
+const totalCopy = {...total};
+
 const setTotal = (opTime, add, salElement) => {
   if (opTime === "all") {
     const iterations = Object.keys(initialData);
@@ -57,7 +59,8 @@ const setTotal = (opTime, add, salElement) => {
   }
 };
 
-const setInitialHeight = () => {
+const setInitialHeight = (displayAll = false) => {
+  console.log("Initial data running");
   const iterations = Object.keys(initialData);
   iterations.forEach((year) => {
     const elements = [...document.getElementById(year).children];
@@ -65,6 +68,7 @@ const setInitialHeight = () => {
     elements.forEach((element) => {
       const height = yearVal[element.className.substring(4)] * 0.00225;
       element.style.height = `${height}px`;
+      displayAll ? element.style.display = "flex" : null;
     });
   });
 };
@@ -87,6 +91,14 @@ const setControlAmounts = (opTime) => {
   }
 };
 
+const resetToggleState = () => {
+  let togglebtns = document.querySelectorAll(".toggle");
+  togglebtns.forEach((element) => {
+    if (!element.classList.contains("toggle-onn"))
+      element.classList.add("toggle-on");
+  });
+};
+
 //Initial Dynamic value setting calls.
 
 setInitialHeight();
@@ -102,6 +114,10 @@ let yearSelect = document.getElementById("year-control");
 yearSelect.addEventListener("change", (e) => {
   duration = e.target.value;
   setControlAmounts(duration);
+  total = totalCopy;
+  resetToggleState();
+  setInitialHeight(true);
+  setTotal("all", true, "");
 });
 
 let togglebtns = [...document.getElementsByClassName("switch")];
