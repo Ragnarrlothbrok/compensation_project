@@ -58,6 +58,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "core-js": "^3.20.3"
+    "@prismicio/client": "^6.6.4",
+    "@prismicio/helpers": "^2.3.3",
+    "core-js": "^3.20.3",
+    "node-fetch": "^2.0.0"
   }
 }

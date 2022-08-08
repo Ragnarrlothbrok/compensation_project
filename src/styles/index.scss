@@ -1,6 +1,63 @@
-$body-color: slateblue;
-
 body {
-  color: $body-color;
   font-family: sans-serif;
+}
+
+.container {
+  padding: 1.25rem;
+  height: inherit;
+}
+
+.full-height {
+  height: inherit;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-spacebtw {
+  justify-content: space-between;
+}
+
+.flex-space-around {
+  justify-content: space-around;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.info-side {
+  padding-inline: 2rem;
+  margin-inline: 1.5rem;
+}
+
+.img-container {
+  padding-inline: 2rem;
+  margin-inline: 1.5rem;
+}
+
+.section-btn {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid green;
+  width: max-content;
+  justify-content: flex-end;
 }
