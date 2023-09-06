@@ -1,14 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>webpack starterkit</title>
-  <meta name="description" content="A light foundation for your next frontend project based on webpack.">
-</head>
-<body>
-  <img src="images/webpack.png" alt="Webpack logo">
-  <h1>webpack starter</h1>
-  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compensation projection</title>
+    <meta name="description" content="Compensation projection demo project" />
+  </head>
+  <body>
+    <div class="page-header">
+      <h2 class="page-title">Compensation Projection</h2>
+      <span class="page-description">
+        Here's what your total compensation amount could look like over time.
+        Explore with various scenarios and see your earning potential
+      </span>
+    </div>
+    <div class="container flex flex-row flex-spacebtw">
+      <div class="control-center flex flex-column">
+        <div class="duration-control">
+          <select id="year-control">
+            <option value="year1">Year 1</option>
+            <option value="year2">Year 2</option>
+            <option value="year3">Year 3</option>
+            <option value="year4">Year 4</option>
+            <option value="all">All</option>
+          </select>
+        </div>
+        <div class="salary-elements">
+          <div class="salary-element flex flex-row flex-spacebtw">
+            <div class="sal-details flex flex-column">
+              <div class="element-title title-font">Benefits</div>
+              <span id="element-benefits" class="element-amount">$27000</span>
+            </div>
+            <div class="switch flex">
+              <div class="toggle toggle-on benefits"></div>
+            </div>
+          </div>
+          <div class="salary-element flex flex-row flex-spacebtw">
+            <div class="sal-details flex flex-column">
+              <div class="element-title title-font">Target Bonus</div>
+              <span id="element-target-bonus" class="element-amount"
+                >$1700</span
+              >
+            </div>
+            <div class="switch flex">
+              <div class="toggle toggle-on target-bonus"></div>
+            </div>
+          </div>
+          <div class="salary-element flex flex-row flex-spacebtw">
+            <div class="sal-details flex flex-column">
+              <div class="element-title title-font">Sign-on Bonus</div>
+              <span id="element-sign-bonus" class="element-amount">$10000</span>
+            </div>
+            <div class="switch flex">
+              <div class="toggle toggle-on sign-bonus"></div>
+            </div>
+          </div>
+          <div class="salary-element flex flex-row flex-spacebtw">
+            <div class="sal-details flex flex-column">
+              <div class="element-title title-font">Equity</div>
+              <span id="element-equity" class="element-amount">$77500</span>
+            </div>
+            <div class="switch flex">
+              <div class="toggle toggle-on equity"></div>
+            </div>
+          </div>
+          <div class="salary-element flex flex-row flex-spacebtw">
+            <div class="sal-details flex flex-column">
+              <div class="element-title title-font">Base Salary</div>
+              <span id="element-base" class="element-amount">$100000</span>
+            </div>
+            <div class="switch flex">
+              <div class="toggle toggle-on base"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="representation flex flex-column">
+        <div class="flex flex-end">
+          <button id="breakdown">Breakdown Table</button>
+        </div>
+        <div class="flex flex-space-around">
+          <div class="year-container flex flex-col-reverse">
+            <div class="year-name title-font">Year 1</div>
+            <div id="year1" class="bar">
+              <div id="year1-benefits" class="bar-benefits"></div>
+              <div id="year1-target-bonus" class="bar-target-bonus"></div>
+              <div id="year1-sign-bonus" class="bar-sign-bonus"></div>
+              <div id="year1-equity" class="bar-equity"></div>
+              <div id="year1-base" class="bar-base"></div>
+            </div>
+            <div class="year-amount flex flex-center">
+              <span id="year1-amount" class="total-amount">$217900</span>
+            </div>
+          </div>
+          <div class="year-container flex flex-col-reverse">
+            <div class="year-name title-font">Year 2</div>
+            <div id="year2" class="bar">
+              <div id="year2-benefits" class="bar-benefits"></div>
+              <div id="year2-target-bonus" class="bar-target-bonus"></div>
+              <div id="year2-sign-bonus" class="bar-sign-bonus"></div>
+              <div id="year2-equity" class="bar-equity"></div>
+              <div id="year2-base" class="bar-base"></div>
+            </div>
+            <div class="year-amount flex flex-center">
+              <span id="year2-amount" class="total-amount">$217900</span>
+            </div>
+          </div>
+          <div class="year-container flex flex-col-reverse">
+            <div class="year-name title-font">Year 3</div>
+            <div id="year3" class="bar">
+              <div id="year3-benefits" class="bar-benefits"></div>
+              <div id="year3-target-bonus" class="bar-target-bonus"></div>
+              <div id="year3-sign-bonus" class="bar-sign-bonus"></div>
+              <div id="year3-equity" class="bar-equity"></div>
+              <div id="year3-base" class="bar-base"></div>
+            </div>
+            <div class="year-amount flex flex-center">
+              <span id="year3-amount" class="total-amount">$217900</span>
+            </div>
+          </div>
+          <div class="year-container flex flex-col-reverse">
+            <div class="year-name title-font">Year 4</div>
+            <div id="year4" class="bar">
+              <div id="year4-benefits" class="bar-benefits"></div>
+              <div id="year4-target-bonus" class="bar-target-bonus"></div>
+              <div id="year4-sign-bonus" class="bar-sign-bonus"></div>
+              <div id="year4-equity" class="bar-equity"></div>
+              <div id="year4-base" class="bar-base"></div>
+            </div>
+            <div class="year-amount flex flex-center">
+              <span id="year4-amount" class="total-amount">$217900</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="breakdown-table" class="modal">
+      <div class="table-content">
+        <div class="table-header">
+          <span class="close">&times;</span>
+          <h2>Breakdown</h2>
+        </div>
+        <div id="table-body"></div>
+      </div>
+    </div>
+  </body>
 </html>
